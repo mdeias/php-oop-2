@@ -4,7 +4,7 @@ class Product {
     public $title;
     public $price;
     public $description;
-    public $discount;
+    public $discount = 0;
 
     public function __construct($_title,$_price)
     {
@@ -26,7 +26,7 @@ class Product {
         $this->description = $_description;
     }
 
-    public function setMail($_discount){
+    public function setDiscount($_discount){
         $this->discount = $_discount;
     }
 
@@ -41,10 +41,10 @@ class Product {
     }
 
     public function getDescription(){
-        return $this->Description;
+        return $this->description;
     }
 
-    public function getMail(){
-        return $this->mail;
+    public function getDiscount(){
+        return $this->discount;
     }
 }
