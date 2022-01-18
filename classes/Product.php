@@ -12,6 +12,8 @@ class Product {
         $this->title = $_title;
     }
 
+    // set 
+
     public function setTitle($_title){
         $this->title = $_title;
     }
@@ -28,4 +30,21 @@ class Product {
         $this->discount = $_discount;
     }
 
+    // get 
+    
+    public function getTitle(){
+        return $this->title;
+    }
+
+    public function getPrice(){
+        return $this->price;
+    }
+
+    public function getDescription(){
+        return $this->Description;
+    }
+
+    public function getMail(){
+        return $this->mail;
+    }
 }

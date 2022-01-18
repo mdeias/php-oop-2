@@ -12,6 +12,8 @@ class User {
         $this->mail = $_mail;
     }
 
+    // set
+
     public function setName($_name){
         $this->name = $_name;
     }
@@ -26,6 +28,24 @@ class User {
 
     public function setMail($_mail){
         $this->mail = $_mail;
+    }
+
+    // get
+
+    public function getName(){
+        return $this->name;
+    }
+
+    public function getSurname(){
+        return $this->surname;
+    }
+
+    public function getAddress(){
+        return $this->address;
+    }
+
+    public function getMail(){
+        return $this->mail;
     }
 
 }
