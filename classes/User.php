@@ -1,16 +1,18 @@
 <?php
-
+require_once __DIR__ . "/Address.php";
 class User {
+
+    use Address;
+
     private $name;
     private $surname;
-    private $address;
     private $mail;
-    private $discount = 0;
+    protected $discount = 0;
 
-    public function __construct($_mail,$_name)
+    public function __construct($_name,$_surname)
     {
         $this->name = $_name;
-        $this->mail = $_mail;
+        $this->surname = $_surname;
     }
 
     // set
@@ -21,10 +23,6 @@ class User {
 
     public function setSurname($_surname){
         $this->surname = $_surname;
-    }
-
-    public function setAddress($_address){
-        $this->address = $_address;
     }
 
     public function setMail($_mail){
@@ -45,9 +43,10 @@ class User {
         return $this->surname;
     }
 
-    public function getAddress(){
-        return $this->address;
+    public function getFullName(){
+        return "$this->name $this->surname";
     }
+
 
     public function getMail(){
         return $this->mail;

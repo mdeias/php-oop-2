@@ -1,6 +1,7 @@
 <?php
 
 class CreditCard {
+    
     private $holder;
     private $number;
     private $code;
