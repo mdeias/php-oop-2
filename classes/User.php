@@ -5,6 +5,7 @@ class User {
     private $surname;
     private $address;
     private $mail;
+    private $discount = 0;
 
     public function __construct($_mail,$_name)
     {
@@ -30,6 +31,10 @@ class User {
         $this->mail = $_mail;
     }
 
+    public function setDiscount($_discount){
+        $this->discount = $_discount;
+    }
+
     // get
 
     public function getName(){
@@ -46,6 +51,10 @@ class User {
 
     public function getMail(){
         return $this->mail;
+    }
+
+    public function getDiscount(){
+       return $this->discount;
     }
 
 }
